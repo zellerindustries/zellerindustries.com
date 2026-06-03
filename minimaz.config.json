@@ -1,0 +1,37 @@
+{
+    "input": {
+        "dir": "./src",
+        "mapping": {
+            "pages": "",
+            "scripts": "",
+            "styles": "",
+            "public": ""
+        },
+        "externals": {
+            "./node_modules/bootstrap-icons/font/fonts": "fonts"
+        }
+    },
+    "output": {
+        "dir": "./dist",
+        "replace": {
+            "<link rel=\"stylesheet\" href=\"/styles/bootstrap-icons.css\" />": "",
+            "<link rel=\"stylesheet\" href=\"/styles/flags.css\" />": "",
+            "<link rel=\"stylesheet\" href=\"/styles/prefers.css\" />": "",
+            "../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
+            "../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
+        },
+        "css": {
+            "bundling": true,
+            "minify": true,
+            "outFile": "styles.css"
+        },
+        "html": {
+            "minify": true
+        },
+        "js": {
+            "bundling": true,
+            "minify": true,
+            "outFile": "scripts.js"
+        }
+    }
+}

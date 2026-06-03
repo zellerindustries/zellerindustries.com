@@ -1,0 +1,24 @@
+{
+  "name": "zeller-industries-githubpages-landing",
+  "version": "2.2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeller-dev/zeller-industries-githubpages-landing.git"
+  },
+  "author": "Hans Zeller",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zeller-dev/zeller-industries-githubpages-landing/issues"
+  },
+  "homepage": "https://github.com/zeller-dev/zeller-industries-githubpages-landing#readme",
+  "devDependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "minimaz-cli": "^0.4.1",
+    "serve": "^14.2.5"
+  },
+  "scripts": {
+    "build": "npx mz b",
+    "start": "npm run build && npx serve ./dist"
+  }
+}
