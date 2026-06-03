@@ -12,13 +12,15 @@
     "url": "https://github.com/zeller-dev/zeller-industries-githubpages-landing/issues"
   },
   "homepage": "https://github.com/zeller-dev/zeller-industries-githubpages-landing#readme",
-  "devDependencies": {
-    "bootstrap-icons": "^1.13.1",
-    "minimaz-cli": "^0.4.1",
-    "serve": "^14.2.5"
-  },
   "scripts": {
     "build": "npx mz b",
     "start": "npm run build && npx serve ./dist"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.13.1",
+    "minimaz-cli": "^0.5.2"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
   }
 }
