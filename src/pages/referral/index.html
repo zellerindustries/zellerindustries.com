@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Referral Program - Zeller Industries</title>
+    <meta
+      name="description"
+      content="Condividi i nostri servizi e guadagna fino a € 100 per ogni nuovo cliente. Scopri il programma Referral di Zeller Industries."
+    />
+
+    <!-- Meta Open Graph -->
+    <meta property="og:title" content="Referral Program - Zeller Industries" />
+    <meta
+      property="og:description"
+      content="Condividi e guadagna fino a € 100. Ogni nuovo cliente aumenta le tue ricompense!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/og-cover.webp" />
+
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS generale del sito + CSS specifico per il referral -->
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="referral.css" />
+  </head>
+  <body>
+    <!-- Header / Navbar principale -->
+    <header id="site-header">
+      <div id="header-container">
+        <a href="/" id="brand">
+          <img src="/assets/logo.webp" alt="" />
+        </a>
+
+        <!-- Toggle menu mobile (checkbox) -->
+        <input type="checkbox" id="nav-toggle" aria-label="Apri menu" />
+        <label for="nav-toggle" id="nav-toggle-label">
+          <i class="icon list" id="icon-open"></i>
+          <i class="icon x-lg" id="icon-close"></i>
+        </label>
+
+        <nav id="main-nav">
+          <ul class="reset">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services-section">Servizi</a></li>
+            <li><a href="/#portfolio-section">Portfolio</a></li>
+            <li><a href="/referral" aria-current="page">Referral</a></li>
+            <li><a href="/#contact-section">Contatti</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero Section -->
+      <section id="referral-hero" aria-labelledby="hero-title">
+        <div class="container text-center">
+          <span class="badge">Zeller Partner Network</span>
+          <h1 id="hero-title">
+            Condividi e <strong>GUADAGNA</strong> <br />
+            fino a <span class="highlight-amount">€ 100</span>
+          </h1>
+          <p class="hero-subtitle">
+            OGNI NUOVO CLIENTE AUMENTA LE TUE RICOMPENSE!
+          </p>
+          <div class="btn-container">
+            <a
+              href="https://wa.me/393513878958?text=Ciao%2C%20vorrei%20informazioni%20sul%20Referral%20Program"
+              class="btn primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Richiedi Link Partner su WhatsApp
+            </a>
+            <a href="#tiers" class="btn secondary">Guarda i Tier</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Come Funziona -->
+      <section id="come-funziona" aria-labelledby="sec-funzionamento">
+        <div class="container">
+          <div class="text-center">
+            <h2 id="sec-funzionamento">Come funziona</h2>
+            <p>
+              Tre passaggi per iniziare a guadagnare con le tue segnalazioni
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="card step-card">
+              <div class="step-badge">1</div>
+              <h3>Condividi</h3>
+              <p>
+                Presenta i nostri servizi di sviluppo software, web o consulenza
+                alla tua rete di contatti.
+              </p>
+            </div>
+
+            <div class="card step-card">
+              <div class="step-badge">2</div>
+              <h3>Converti</h3>
+              <p>
+                Quando il nuovo cliente chiude un contratto con Zeller
+                Industries, la vendita viene abbinata al tuo profilo.
+              </p>
+            </div>
+
+            <div class="card step-card">
+              <div class="step-badge">3</div>
+              <h3>Guadagna</h3>
+              <p>
+                Ricevi la tua percentuale diretta non appena il progetto viene
+                finalizzato e saldato.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- I Tier / Livelli -->
+      <section id="tiers" aria-labelledby="sec-tiers">
+        <div class="container">
+          <div class="text-center">
+            <h2 id="sec-tiers">I Livelli di Ricompensa</h2>
+            <p>Più clienti porti, più sale la tua percentuale di guadagno</p>
+          </div>
+
+          <div class="grid">
+            <!-- Tier Bronzo -->
+            <article class="card tier-card tier-bronze">
+              <div class="tier-badge-label">Livello 1</div>
+              <h3>TIER BRONZO</h3>
+              <div class="tier-percentage">5%</div>
+              <p class="tier-meta">BASE</p>
+              <ul class="tier-features">
+                <li>Valido da 1 a 4 clienti</li>
+                <li>Accredito diretto via Bonifico / PayPal</li>
+              </ul>
+            </article>
+
+            <!-- Tier Argento -->
+            <article class="card tier-card tier-silver">
+              <div class="tier-badge-label">Livello 2</div>
+              <h3>TIER ARGENTO</h3>
+              <div class="tier-percentage">10%</div>
+              <p class="tier-meta">DA 5 CLIENTI</p>
+              <ul class="tier-features">
+                <li>Provvigione raddoppiata</li>
+                <li>Supporto e tracciamento dedicato</li>
+              </ul>
+            </article>
+
+            <!-- Tier Oro -->
+            <article class="card tier-card tier-gold">
+              <div class="tier-badge-label">Livello 3</div>
+              <h3>TIER ORO</h3>
+              <div class="tier-percentage">15%</div>
+              <p class="tier-meta">DA 10 CLIENTI</p>
+              <ul class="tier-features">
+                <li>Massima percentuale di guadagno</li>
+                <li>Bonus extra su progetti custom Enterprise</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA / Contatti -->
+      <section id="diventa-partner" aria-labelledby="sec-cta">
+        <div class="container text-center">
+          <h2 id="sec-cta">Vuoi diventare Partner?</h2>
+          <p>
+            Contattaci direttamente per ricevere il tuo codice identificativo
+            univoco.
+          </p>
+          <div class="btn-container">
+            <a
+              href="mailto:info@zellerindustries.com?subject=Richiesta%20Referral%20Program"
+              class="btn primary"
+            >
+              Email: info@zellerindustries.com
+            </a>
+            <a
+              href="https://wa.me/393513878958"
+              class="btn secondary"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp: +39 351 3878958
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Note Legali -->
+      <section id="note-legali" aria-labelledby="sec-legal-link">
+        <div class="container text-center">
+          <h2 id="sec-legal-link" class="sr-only">Termini e Condizioni</h2>
+          <p class="legal-notice">
+            TERMINI E CONDIZIONI SU
+            <a href="/referral/terms">ZELLERINDUSTRIES.COM/REFERRAL</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Aziendale -->
+    <footer id="site-footer" role="contentinfo">
+      <div class="footer-top">
+        <div class="footer-container">
+          <div class="footer-col footer-brand">
+            <a href="/" class="footer-logo">
+              <span class="logo-zeller">ZELLER</span>
+              <span class="logo-industries">INDUSTRIES</span>
+            </a>
+            <p class="footer-desc">
+              Sviluppo Software, Consulenza IT &amp; Innovazione. P.IVA:
+              IT03209750649 &bull; Italia.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h2 class="footer-title">Contatti</h2>
+            <ul class="footer-links">
+              <li>
+                <a href="mailto:info@zellerindustries.com"
+                  >info@zellerindustries.com</a
+                >
+              </li>
+              <li>
+                <a href="https://wa.me/393513878958">+39 351 3878958</a>
+              </li>
+              <li>
+                <a
+                  href="https://store.zellerindustries.com"
+                  target="_blank"
+                  rel="noopener"
+                  >store.zellerindustries.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h2 class="footer-title">Connettiti</h2>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/company/zellerindustries"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn di Zeller Industries"
+              >
+                <i class="icon linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/zellerindustries"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub di Zeller Industries"
+              >
+                <i class="icon github" aria-hidden="true"></i>
+                <span class="sr-only">GitHub</span>
+              </a>
+              <a
+                href="https://www.instagram.com/zellerindustries_"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram di Zeller Industries"
+              >
+                <i class="icon instagram" aria-hidden="true"></i>
+                <span class="sr-only">Instagram</span>
+              </a>
+              <a
+                href="https://www.facebook.com/zellerindustries"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook di Zeller Industries"
+              >
+                <i class="icon facebook" aria-hidden="true"></i>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <p>&copy; 2026 Zeller Industries. Tutti i diritti riservati.</p>
+          <div class="legal-links">
+            <a href="/referral/terms">Termini e Condizioni</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Barra di navigazione mobile in basso -->
+    <nav id="bottom-bar" aria-label="Navigazione rapida mobile">
+      <div class="bottom-bar-container">
+        <a href="/" class="btn">
+          <i class="icon house-fill"></i>
+          <span>Home</span>
+        </a>
+
+        <a href="/referral" class="btn" aria-current="page">
+          <i class="icon person-lines-fill"></i>
+          <span>Referral</span>
+        </a>
+
+        <a
+          href="https://wa.me/393513878958"
+          target="_blank"
+          rel="noopener"
+          class="btn"
+        >
+          <i class="icon whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </nav>
+  </body>
+</html>

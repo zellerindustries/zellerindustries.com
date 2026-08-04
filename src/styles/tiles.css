@@ -1,0 +1,39 @@
+/* ==========================================================================
+   ZELLER INDUSTRIES — Tiles Module
+   ========================================================================== */
+
+/* Core Tile Base */
+.tile {
+  padding: var(--space-xs);
+  border-radius: var(--radius-sm);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-md);
+  font-family: var(--font-display);
+  transition:
+    background-color var(--t-fast),
+    border-color var(--t-fast),
+    color var(--t-fast),
+    transform var(--t-fast),
+    box-shadow var(--t-fast);
+}
+
+/* ------------------------------
+   COLOR & STYLE VARIANTS
+------------------------------ */
+
+/* Default Outline / Surface */
+.tile.base {
+  border: var(--clr-element-border);
+  background-color: var(--clr-surface);
+  color: var(--clr-primary);
+}
+
+/* Primary Filled (Brand Accent) */
+.tile.primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-surface);
+  border: 1px solid var(--clr-primary-hover);
+}

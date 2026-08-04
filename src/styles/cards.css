@@ -1,0 +1,88 @@
+/* ==========================================================================
+   ZELLER INDUSTRIES — Cards Module
+   ========================================================================== */
+
+.card {
+  background: var(--card-bg);
+  border: var(--clr-element-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+
+  will-change: transform, border-color, box-shadow;
+  transition:
+    transform var(--t-fast),
+    border-color var(--t-fast),
+    box-shadow var(--t-fast),
+    background-color var(--t-fast);
+}
+
+.card .card-info,
+.card .card-content {
+  width: 100%;
+  padding: var(--space-xs);
+  flex: 1;
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-text-main);
+}
+
+.card p {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--clr-text-muted);
+  margin: 0;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: var(--radius-sm);
+  will-change: transform;
+  transition: transform var(--t-fast);
+}
+
+.card .card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-sm);
+}
+
+.card .card-header .icon {
+  font-size: var(--fs-lg);
+}
+
+.card .card-header span {
+  flex: 1;
+}
+
+.card ul {
+  list-style: none;
+  color: var(--clr-text-muted);
+  text-align: center;
+}
+
+.card ul li {
+  margin-bottom: var(--space-sm);
+}
+
+.card ul li:last-child {
+  margin-bottom: 0;
+}
+
+.card-footer {
+  width: 100%;
+}

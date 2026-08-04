@@ -1,0 +1,176 @@
+/* ------------------------------
+   HEADER & NAVIGATION (ID-BASED)
+------------------------------ */
+#site-header {
+  background-color: var(--clr-surface);
+  /* Added '1px solid' assuming the variable is just a hex/rgb code */
+  border-bottom: 1px solid var(--clr-element-border);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#header-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------------------------
+   DESKTOP NAVIGATION
+------------------------------ */
+#main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  list-style: none; /* Ensures no default bullets disrupt layout */
+  margin: 0;
+  padding: 0;
+}
+
+#main-nav a {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-main);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-bold);
+  transition: color var(--t-fast);
+}
+
+#main-nav a:not(.btn):hover {
+  color: var(--clr-primary);
+}
+
+/* Contact Us Button (Matching image_542de3.png) */
+#main-nav a.btn.cta {
+  background-color: #006eb3; /* Blue background from the image */
+  color: #ffffff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px; /* Pill shape */
+  border: 1px solid #005b94;
+  transition: background-color var(--t-fast);
+}
+
+#main-nav a.btn.cta:hover {
+  background-color: #005b94;
+  color: #ffffff;
+}
+
+/* ------------------------------
+   BRAND LOGO
+------------------------------ */
+#brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+#brand img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#brand:hover img {
+  transform: scale(1.04);
+}
+
+/* Responsive Desktop Logo */
+@media (min-width: 992px) {
+  #brand img {
+    height: 56px;
+  }
+}
+
+/* ------------------------------
+   MOBILE TOGGLE (Hidden on Desktop)
+------------------------------ */
+#nav-toggle {
+  display: none;
+}
+
+#nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  padding: var(--space-sm) 0;
+  color: var(--clr-text-main);
+  font-size: 2rem;
+  transition: color var(--t-fast);
+}
+
+#nav-toggle-label:hover {
+  color: var(--clr-primary);
+}
+
+#icon-close {
+  display: none;
+}
+
+/* ------------------------------
+   MOBILE NAVIGATION (max-width: 768px)
+------------------------------ */
+@media (max-width: 768px) {
+  #nav-toggle-label {
+    display: block;
+  }
+
+  #main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--clr-surface);
+    border-bottom: 1px solid var(--clr-element-border);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+    /* Mobile hide state */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--t-fast);
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  #main-nav ul li {
+    width: 100%;
+  }
+
+  #main-nav a {
+    display: block;
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  #main-nav a.btn.cta {
+    border-bottom: none;
+    margin-top: var(--space-xs);
+    text-align: center;
+    border-radius: 4px; /* Optional: Squarer button on mobile, or keep 50px */
+  }
+
+  /* Mobile Open State */
+  #nav-toggle:checked ~ #main-nav {
+    max-height: 400px;
+  }
+
+  /* Swap Bootstrap Icons on Check */
+  #nav-toggle:checked ~ #nav-toggle-label #icon-open {
+    display: none;
+  }
+
+  #nav-toggle:checked ~ #nav-toggle-label #icon-close {
+    display: inline-block;
+  }
+}

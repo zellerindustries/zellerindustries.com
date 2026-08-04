@@ -1,0 +1,91 @@
+/* ==========================================================================
+   HERO SECTION: Grid & Metrics (Corporate / B2B)
+   ========================================================================== */
+
+#hero {
+  padding: var(--space-lg) var(--space-md);
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle at 90% 10%,
+    rgba(204, 102, 0, 0.08) 0%,
+    transparent 60%
+  );
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+/* --- Content Block (Left Column) --- */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+#title-zeller {
+  display: block;
+  color: var(--clr-text-main);
+}
+
+#title-industries {
+  display: block;
+  color: #cc6600;
+  background: linear-gradient(135deg, #cc6600 0%, #ff8533 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#hero-tagline {
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--clr-text-muted);
+  margin-bottom: 2rem;
+  max-width: 540px;
+}
+
+/* Buttons */
+.hero-content .btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* --- Metrics & Pillars Grid (Right Column) --- */
+.hero-grid-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+}
+
+#hero .btn.secondary {
+  padding: var(--space-xs) var(--space-lg);
+}

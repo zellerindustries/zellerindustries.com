@@ -18,7 +18,7 @@
     />
     <meta name="googlebot" content="index, follow" />
     <meta name="author" content="Zeller Industries" />
-    <meta name="copyright" content="© 2025 Zeller Industries" />
+    <meta name="copyright" content="© 2026 Zeller Industries" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="theme-color" content="#cc6600" />
 
@@ -71,26 +71,11 @@
       href="https://zellerindustries.com/sitemap.xml"
     />
 
-    <link rel="canonical" href="https://zellerindustries.com/it/" />
+    <link rel="canonical" href="https://zellerindustries.com/" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/assets/favicon-80.png" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/favicon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon-16.png"
-    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/styles/bootstrap-icons.css" />
-    <link rel="stylesheet" href="/styles/prefers.css" />
+    <link rel="stylesheet" href="/style.css" />
 
     <script type="application/ld+json">
       {
@@ -260,56 +245,142 @@
   </head>
 
   <body>
-    <!-- HERO -->
-    <header id="hero" role="banner">
-      <div class="logo-wrap">
-        <img
-          src="/assets/logo.webp"
-          alt="Logo Zeller Industries"
-          id="site-logo"
-          width="64"
-          height="64"
-        />
-        <h1>
-          <span class="seo-hidden">
-            Zeller Industries – Sviluppo software e consulenza IT
-          </span>
-          <span id="title-zeller" aria-hidden="true">ZELLER</span>
-          <br />
-          <span id="title-industries" aria-hidden="true">INDUSTRIES</span>
-        </h1>
-      </div>
+    <header id="site-header">
+      <div id="header-container">
+        <!-- Logo Area -->
+        <a href="/" id="brand">
+          <img src="/assets/logo.webp" alt="" />
+        </a>
 
-      <span id="hero-tagline">Immagina. Sviluppa. Pubblica.</span>
-      <div class="btn-container">
-        <a
-          href="https://store.zellerindustries.com"
-          class="btn cta"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Store Zeller Industries"
-        >
-          <i class="icon cart" aria-hidden="true"></i>
-          <span>Store</span>
-        </a>
-        <a
-          href="#contact-section"
-          class="btn"
-          aria-label="Contatta Zeller Industries"
-        >
-          <i class="icon telephone" aria-hidden="true"></i>
-          <span>Contatti</span>
-        </a>
+        <!-- Pure CSS Mobile Toggle using Bootstrap Icons -->
+        <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+        <label for="nav-toggle" id="nav-toggle-label">
+          <i class="icon list" id="icon-open"></i>
+          <i class="icon x-lg" id="icon-close"></i>
+        </label>
+
+        <!-- Navigation Links -->
+        <nav id="main-nav">
+          <ul class="reset">
+            <li><a href="#hero">About</a></li>
+            <li><a href="#services-section">Services</a></li>
+            <li><a href="#portfolio-section">Portfolio</a></li>
+            <li><a href="#contact-section" class="btn cta">Contact Us</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+
     <main>
+      <!-- HERO -->
+      <section id="hero" role="banner">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1>
+              <span id="title-zeller">ZELLER</span>
+              <span id="title-industries">INDUSTRIES</span>
+            </h1>
+
+            <p id="hero-tagline" class="sr-only">
+              Partner tecnologico per la progettazione e lo sviluppo di
+              soluzioni software su misura, architetture scalabili e innovazione
+              digitale per le aziende.
+            </p>
+
+            <div class="btn-container">
+              <a
+                href="#contact-section"
+                class="btn primary cta"
+                aria-label="Contatta Zeller Industries"
+              >
+                <i class="icon telephone text-light" aria-hidden="true"></i>
+                <span>Parla del tuo progetto</span>
+              </a>
+              <a
+                href="https://store.zellerindustries.com"
+                class="btn secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Store Zeller Industries"
+              >
+                <i class="icon cart" aria-hidden="true"></i>
+                <span>Visita lo store</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Colonna Destra: Griglia dei Pilastri / Metriche -->
+          <div class="hero-grid-metrics">
+            <div class="card">
+              <div class="card-header">
+                <div class="tile base">
+                  <i class="icon code-slash" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <div class="card-info">
+                <h3>Sviluppo Custom</h3>
+                <p class="sr-only">
+                  Web app, mobile e architetture software scalabili e ad alte
+                  prestazioni.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="tile base">
+                  <i class="icon person-fill-gear" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Consulenza IT</h3>
+                <p class="sr-only">
+                  Strategia digitale, analisi di processi e ottimizzazione
+                  tecnologica.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="tile base">
+                  <i class="icon lightbulb" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <div class="card-info">
+                <h3>Ricerca &amp; Sviluppo</h3>
+                <p class="sr-only">
+                  Sperimentazione di nuove tecnologie, prototipi e Proof of
+                  Concept.
+                </p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <div class="tile base">
+                  <i class="icon shield-fill-check" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="card-info">
+                <h3>Supporto &amp; Ops</h3>
+                <p class="sr-only">
+                  Manutenzione continua, monitoraggio e sicurezza dei sistemi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- SERVICES -->
       <section id="services-section" aria-labelledby="services-title">
         <h2 id="services-title">Servizi</h2>
         <ul id="services-grid" class="reset grid">
           <li class="card">
             <h3 class="card-header">
-              <i class="icon wrapped code-slash" aria-hidden="true"></i>
+              <i class="icon code-slash tile primary" aria-hidden="true"></i>
               <span>Sviluppo Software</span>
             </h3>
             <div class="card-content">
@@ -334,7 +405,10 @@
           <!-- Consulenza -->
           <li class="card">
             <h3 class="card-header">
-              <i class="icon wrapped person-lines-fill" aria-hidden="true"></i>
+              <i
+                class="icon person-lines-fill tile primary"
+                aria-hidden="true"
+              ></i>
               <span>Consulenza</span>
             </h3>
             <div class="card-content">
@@ -359,7 +433,7 @@
           <!-- Manutenzione & Assistenza -->
           <li class="card">
             <h3 class="card-header">
-              <i class="icon wrapped tools" aria-hidden="true"></i>
+              <i class="icon tools tile primary" aria-hidden="true"></i>
               <span>Manutenzione & Assistenza</span>
             </h3>
             <div class="card-content">
@@ -384,7 +458,7 @@
           <!-- Ricerca, Sviluppo e Innovazione -->
           <li class="card">
             <h3 class="card-header">
-              <i class="icon wrapped lightbulb" aria-hidden="true"></i>
+              <i class="icon lightbulb tile primary" aria-hidden="true"></i>
               <span>Ricerca, Sviluppo e Innovazione</span>
             </h3>
             <div class="card-content">
@@ -592,7 +666,7 @@
                 rel="noopener noreferrer"
                 class="btn"
               >
-                <i class="icon wrapped linkedin" aria-hidden="true"></i>
+                <i class="icon linkedin tile primary" aria-hidden="true"></i>
                 <span>LinkedIn</span>
               </a>
             </li>
@@ -603,7 +677,7 @@
                 rel="noopener noreferrer"
                 class="btn"
               >
-                <i class="icon wrapped github" aria-hidden="true"></i>
+                <i class="icon github tile primary" aria-hidden="true"></i>
                 <span>GitHub</span>
               </a>
             </li>
@@ -614,7 +688,7 @@
                 rel="noopener noreferrer"
                 class="btn"
               >
-                <i class="icon wrapped instagram" aria-hidden="true"></i>
+                <i class="icon instagram tile primary" aria-hidden="true"></i>
                 <span>Instagram</span>
               </a>
             </li>
@@ -625,7 +699,7 @@
                 rel="noopener noreferrer"
                 class="btn"
               >
-                <i class="icon wrapped facebook" aria-hidden="true"></i>
+                <i class="icon facebook tile primary" aria-hidden="true"></i>
                 <span>Facebook</span>
               </a>
             </li>
@@ -640,7 +714,10 @@
           <ul id="contact-links" class="reset list">
             <li>
               <a href="mailto:info@zellerindustries.com" class="btn">
-                <i class="icon wrapped envelope-fill" aria-hidden="true"></i>
+                <i
+                  class="icon envelope-fill tile primary"
+                  aria-hidden="true"
+                ></i>
                 <span>Email</span>
               </a>
             </li>
@@ -651,7 +728,7 @@
                 rel="noopener noreferrer"
                 class="btn"
               >
-                <i class="icon wrapped whatsapp" aria-hidden="true"></i>
+                <i class="icon whatsapp tile primary" aria-hidden="true"></i>
                 <span>WhatsApp</span>
               </a>
             </li>
@@ -661,18 +738,142 @@
     </main>
 
     <!-- FOOTER -->
-    <footer id="site-footer">
-      <!--<nav aria-label="Legal">
-      <a href="https://www.iubenda.com/privacy-policy/31420156"
-        class="iubenda-black iubenda-noiframe iubenda-embed iub-legal-only iubenda-noiframe "
-        title="Privacy Policy ">Privacy Policy</a>
-      <a href="https://www.iubenda.com/privacy-policy/31420156/cookie-policy"
-        class="iubenda-black iubenda-noiframe iubenda-embed iub-legal-only iubenda-noiframe "
-        title="Cookie Policy ">Cookie Policy</a>
-    </nav>-->
-      <p>&copy; 2025 Zeller Industries<br />Tutti i diritti riservati.</p>
+    <footer id="site-footer" role="contentinfo">
+      <div class="footer-top">
+        <div class="footer-container">
+          <!-- Brand & Info -->
+          <div class="footer-col footer-brand">
+            <a href="/" class="footer-logo">
+              <span class="logo-zeller">ZELLER</span>
+              <span class="logo-industries">INDUSTRIES</span>
+            </a>
+            <p class="footer-desc">
+              Boutique di Software Engineering, sviluppo di web application ad
+              alte prestazioni e ricerca tecnologica.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h2 class="footer-title">Navigazione</h2>
+            <ul class="footer-links">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#services-section">Servizi</a></li>
+              <li><a href="#portfolio-section">Portfolio</a></li>
+              <li>
+                <a
+                  href="https://store.zellerindustries.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Store Ufficiale</a
+                >
+              </li>
+              <li><a href="#contact-section">Contatti</a></li>
+            </ul>
+          </div>
+
+          <!-- Servizi / Core Business -->
+          <div class="footer-col">
+            <h2 class="footer-title">Competenze</h2>
+            <ul class="footer-links">
+              <li><a href="#services-section">Software Custom</a></li>
+              <li><a href="#services-section">Web &amp; Mobile App</a></li>
+              <li><a href="#services-section">Architetture Cloud</a></li>
+              <li><a href="#services-section">Consulenza R&amp;D</a></li>
+            </ul>
+          </div>
+
+          <!-- Social & Legal -->
+          <div class="footer-col">
+            <h2 class="footer-title">Connettiti</h2>
+            <div class="social-links">
+              <a
+                href="https://github.com/zellerindustries"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub di Zeller Industries"
+              >
+                <i class="icon github" aria-hidden="true"></i>
+                <span class="sr-only">GitHub</span>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn di Zeller Industries"
+              >
+                <i class="icon linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="https://wa.me/393513878958"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contatto WhatsApp"
+              >
+                <i class="icon whatsapp" aria-hidden="true"></i>
+                <span class="sr-only">WhatsApp</span>
+              </a>
+              <a
+                href="mailto:info@zellerindustries.com"
+                aria-label="Invia un'email a Zeller Industries"
+              >
+                <i class="icon envelope-fill" aria-hidden="true"></i>
+                <span class="sr-only">Email</span>
+              </a>
+            </div>
+            <div class="back-to-top-wrapper">
+              <a href="#hero" aria-label="Torna all'inizio della pagina">
+                <i class="icon arrow-up" aria-hidden="true"></i>
+                <span>Torna su</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom / Company Legal Data -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="legal-info">
+            <p>&copy; 2026 Zeller Industries. Tutti i diritti riservati.</p>
+            <p class="company-details">
+              <span>P.IVA: IT03209750649</span> &bull;
+              <span>Italia</span>
+            </p>
+          </div>
+          <div class="legal-links">
+            <a href="/legal/privacy">Informativa sulla Riservatezza </a>
+            <a href="/legal/cookie">Informativa sui Cookie</a>
+            <a href="/legal/terms">Termini e Condizioni</a>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- BOTTOM BAR FLOATING -->
+    <nav id="bottom-bar" aria-label="Navigazione rapida mobile">
+      <div class="bottom-bar-container">
+        <a href="/" class="btn" aria-current="page">
+          <i class="icon house-fill"></i>
+          <span>Home</span>
+        </a>
+
+        <a
+          href="https://store.zellerindustries.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn"
+        >
+          <i class="icon cart"></i>
+          <span>Store</span>
+        </a>
+
+        <a href="#contact-section" class="btn">
+          <i class="icon envelope-fill"></i>
+          <span>Contatti</span>
+        </a>
+      </div>
+    </nav>
   </body>
-  <!-- TODO add bottom bar -->
-  <!-- @TODO gumroad -->
 </html>

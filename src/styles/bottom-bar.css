@@ -1,0 +1,146 @@
+/* ==========================================================================
+   FLOATING MOBILE BOTTOM BAR
+   ========================================================================== */
+
+#bottom-bar {
+  position: fixed;
+  bottom: calc(var(--space-sm) + env(safe-area-inset-bottom));
+  left: var(--space-sm);
+  right: var(--space-sm);
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.bottom-bar-container {
+  width: 100%;
+  max-width: var(--content-max-width);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+
+  padding: var(--space-sm);
+
+  background: rgba(31, 31, 31, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: var(--clr-element-border);
+  border-radius: var(--radius-md);
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.5),
+    0 2px 6px rgba(255, 255, 255, 0.05) inset;
+
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   BUTTONS
+   -------------------------------------------------------------------------- */
+
+.bottom-bar-container .btn {
+  flex: 1;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+
+  padding: var(--space-xs) var(--space-2xs);
+
+  color: var(--clr-text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-light);
+  line-height: 1;
+
+  box-shadow: none;
+  transform: none;
+}
+
+/* Keep the button label compact */
+.bottom-bar-container .btn span {
+  flex: none;
+  padding: 0;
+
+  text-align: center;
+  line-height: 1;
+}
+
+/* Icons */
+.bottom-bar-container .btn .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-lg);
+  line-height: 1;
+
+  color: currentColor;
+
+  transition:
+    color var(--t-fast),
+    transform var(--t-fast);
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTION
+   -------------------------------------------------------------------------- */
+
+.bottom-bar-container .btn:hover {
+  color: var(--clr-text-main);
+  background: var(--clr-surface-hover);
+  border-color: transparent;
+
+  transform: translateY(-1px);
+
+  box-shadow: none;
+}
+
+.bottom-bar-container .btn:hover .icon {
+  color: currentColor;
+  transform: translateY(-2px);
+}
+
+.bottom-bar-container .btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.bottom-bar-container .btn:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   CURRENT PAGE
+   -------------------------------------------------------------------------- */
+
+.bottom-bar-container .btn[aria-current="page"] {
+  color: var(--clr-text-main);
+}
+
+.bottom-bar-container .btn[aria-current="page"] .icon {
+  color: var(--clr-primary);
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  #bottom-bar {
+    display: none;
+  }
+}

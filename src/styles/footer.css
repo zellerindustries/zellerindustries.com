@@ -1,0 +1,193 @@
+/* ==========================================================================
+   SITE FOOTER
+   ========================================================================== */
+
+#site-footer {
+  background-color: var(--clr-surface);
+  color: var(--clr-text-muted);
+  border-top: var(--clr-element-border);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+}
+
+.footer-container {
+  width: min(100%, var(--content-max-width));
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER TOP
+   -------------------------------------------------------------------------- */
+
+.footer-top {
+  padding-block: var(--space-xl) var(--space-lg);
+}
+
+.footer-top .footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 576px) {
+  .footer-top .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-top .footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   BRAND
+   -------------------------------------------------------------------------- */
+
+.footer-brand .footer-logo {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+  font-size: var(--fs-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.footer-brand .logo-zeller {
+  color: var(--clr-text-main);
+}
+
+.footer-brand .logo-industries {
+  color: var(--clr-primary);
+}
+
+.footer-desc {
+  max-width: 300px;
+  margin-bottom: var(--space-md);
+  color: var(--clr-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   HEADINGS & LINKS
+   -------------------------------------------------------------------------- */
+
+.footer-title {
+  color: var(--clr-text-main);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-xs);
+}
+
+.footer-links a {
+  display: inline-block;
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  transition:
+    color var(--t-fast),
+    transform var(--t-fast);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--clr-primary);
+  transform: translateX(3px);
+}
+
+/* --------------------------------------------------------------------------
+   SOCIAL LINKS
+   -------------------------------------------------------------------------- */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--space-lg) + var(--space-xs));
+  height: calc(var(--space-lg) + var(--space-xs));
+  border: var(--clr-element-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--clr-surface-hover);
+  color: var(--clr-text-muted);
+  font-size: var(--fs-md);
+  text-decoration: none;
+  transition:
+    color var(--t-fast),
+    background-color var(--t-fast),
+    border-color var(--t-fast),
+    transform var(--t-fast),
+    box-shadow var(--t-fast);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: #ffffff;
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--clr-primary) 30%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER BOTTOM
+   -------------------------------------------------------------------------- */
+
+.footer-bottom {
+  border-top: 1px solid var(--clr-border);
+  padding-block: var(--space-md);
+  color: var(--clr-text-muted);
+  font-size: var(--fs-sm);
+}
+
+.footer-bottom .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.company-details {
+  margin-top: var(--space-2xs);
+}
+
+.legal-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.legal-links a {
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.legal-links a:hover,
+.legal-links a:focus-visible {
+  color: var(--clr-text-main);
+}

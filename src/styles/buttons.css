@@ -1,0 +1,163 @@
+/* ========================================
+   ZELLER INDUSTRIES — Button Styles
+======================================== */
+
+/* ------------------------------
+   BUTTON BASE
+------------------------------ */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--clr-text-main);
+
+  background-color: var(--clr-surface);
+  border: var(--clr-element-border);
+  border-radius: var(--radius-sm);
+
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+
+  will-change: transform, box-shadow, background-color;
+
+  transition:
+    background-color var(--t-fast),
+    border-color var(--t-fast),
+    color var(--t-fast),
+    transform var(--t-fast),
+    box-shadow var(--t-fast);
+}
+
+.btn span {
+  flex: 1;
+  text-align: center;
+  padding: var(--space-xs);
+}
+
+.btn .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-lg);
+  color: var(--clr-primary);
+
+  transition:
+    color var(--t-fast),
+    transform var(--t-fast);
+}
+
+/* ------------------------------
+   BASE INTERACTION STATES
+------------------------------ */
+.btn:not([aria-disabled="true"]):hover {
+  background-color: var(--clr-surface-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:not([aria-disabled="true"]):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
+/* ------------------------------
+   ARIA DISABLED
+------------------------------ */
+.btn[aria-disabled="true"] {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.btn[aria-disabled="true"]:hover,
+.btn[aria-disabled="true"]:active {
+  background-color: var(--clr-surface);
+  border-color: transparent;
+  color: var(--clr-text-main);
+  transform: none;
+  box-shadow: none;
+}
+
+/* ------------------------------
+   PRIMARY BUTTON (ORANGE)
+------------------------------ */
+.btn.primary {
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: #ffffff;
+}
+
+.btn.primary .icon {
+  color: #ffffff;
+}
+
+.btn.primary:not([aria-disabled="true"]):hover {
+  background-color: var(--clr-primary-hover);
+  border-color: var(--clr-primary-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(204, 102, 0, 0.35);
+}
+
+/* ------------------------------
+   SECONDARY BUTTON (BLUE)
+------------------------------ */
+.btn.secondary {
+  background-color: var(--clr-accent);
+  border-color: var(--clr-accent);
+  color: #ffffff;
+}
+
+.btn.secondary .icon {
+  color: #ffffff;
+}
+
+.btn.secondary:not([aria-disabled="true"]):hover {
+  background-color: var(--clr-accent-hover);
+  border-color: var(--clr-accent-hover);
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 102, 153, 0.35);
+}
+
+/* ------------------------------
+   CTA MODIFIER (ORBITRON / HIGH TECH)
+------------------------------ */
+.btn.cta {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  width: 100%;
+}
+
+.btn.cta .icon {
+  font-size: var(--fs-lg);
+}
+
+.btn.cta:not([aria-disabled="true"]):hover .icon {
+  transform: translateX(3px);
+}
+
+/* ------------------------------
+   BUTTON CONTAINER
+------------------------------ */
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}

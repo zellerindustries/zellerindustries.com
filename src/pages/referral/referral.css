@@ -1,0 +1,129 @@
+/* =====================================================
+   REFERRAL PROGRAM - STILI DEDICATI (referral.css)
+===================================================== */
+
+/* Content wrapper, mirrors .footer-container's centering formula */
+.container {
+  width: min(100%, var(--content-max-width));
+  margin-inline: auto;
+  padding-inline: var(--section-padding-x);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-2xs) var(--space-sm);
+  background-color: var(--clr-surface);
+  border: var(--clr-element-border);
+  border-radius: 9999px;
+  color: var(--clr-primary);
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Testo Hero & Highlight */
+.highlight-amount {
+  color: var(--clr-primary);
+  font-size: 1.3em;
+  font-weight: 800;
+}
+
+.hero-subtitle {
+  color: var(--clr-accent);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+
+/* Numerazione Step */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--clr-primary);
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* Stili specifici Card Tier */
+.tier-card {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tier-badge-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.tier-percentage {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+
+.tier-meta {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--clr-border);
+  padding-top: 1rem;
+}
+
+.tier-features li {
+  margin-bottom: 0.5rem;
+}
+
+/* Accenti Colore dei Tier (presi dalla locandina) */
+.tier-bronze .tier-percentage,
+.tier-bronze h3 {
+  color: #c28851; /* Bronzo */
+}
+
+.tier-silver .tier-percentage,
+.tier-silver h3 {
+  color: #d1d3d4; /* Argento */
+}
+
+.tier-gold .tier-percentage,
+.tier-gold h3 {
+  color: #f2c700; /* Oro */
+}
+
+/* Note legali in calce */
+.legal-notice {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  margin: 2rem 0;
+}
+
+.legal-notice a {
+  color: inherit;
+  text-decoration: underline;
+}

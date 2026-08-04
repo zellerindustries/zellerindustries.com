@@ -14,16 +14,13 @@
     "output": {
         "dir": "./dist",
         "replace": {
-            "<link rel=\"stylesheet\" href=\"/styles/bootstrap-icons.css\" />": "",
-            "<link rel=\"stylesheet\" href=\"/styles/flags.css\" />": "",
-            "<link rel=\"stylesheet\" href=\"/styles/prefers.css\" />": "",
             "../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
             "../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
         },
         "css": {
             "bundling": true,
             "minify": true,
-            "outFile": "styles.css"
+            "outFile": "style.css"
         },
         "html": {
             "minify": true

@@ -1,0 +1,129 @@
+# Zeller Industries
+
+> Zeller Industries è una realtà italiana di software engineering, sviluppo software e consulenza IT, focalizzata sulla progettazione di soluzioni digitali personalizzate, architetture scalabili, automazione e ricerca e sviluppo tecnologico.
+
+## Azienda
+
+Zeller Industries opera nello sviluppo di soluzioni software su misura, consulenza IT, manutenzione e assistenza tecnica, ricerca e sviluppo e innovazione digitale.
+
+La società si rivolge principalmente ad aziende che necessitano di progettazione e sviluppo di sistemi digitali personalizzati, ottimizzazione tecnologica e supporto continuativo.
+
+Website: https://zellerindustries.com/
+
+## Servizi
+
+### Sviluppo Software
+
+* Web application su misura
+* Applicazioni mobile native e cross-platform
+* Sistemi gestionali e integrazioni personalizzate
+* Automazione dei processi
+* Architetture software scalabili e performanti
+
+### Consulenza IT
+
+* Strategia IT e digitale
+* Analisi e ottimizzazione dei processi
+* Consulenza tecnologica
+* Ricerca, sviluppo e innovazione
+* Formazione interna su strumenti digitali
+
+### Manutenzione e Assistenza
+
+* Monitoraggio e supporto continuo
+* Aggiornamenti software e patch di sicurezza
+* Ottimizzazione delle performance
+* Scalabilità dei sistemi
+* Backup e disaster recovery
+* Sicurezza dei dati
+
+### Ricerca, Sviluppo e Innovazione
+
+* Sperimentazione di nuove tecnologie
+* Prototipi
+* Proof of Concept
+* Innovazione di prodotto e processo
+* Ricerca e sviluppo digitale
+
+## Competenze
+
+Le principali aree di competenza includono:
+
+* Software custom
+* Web application
+* Mobile application
+* Architetture cloud
+* Automazione
+* Consulenza IT
+* Ricerca e sviluppo
+* Sicurezza e manutenzione dei sistemi
+
+## Portfolio
+
+### Do Stone
+
+Sviluppo del sito web per Do Stone – Marble and more.
+
+Website: https://dostone.it
+
+### Yamas Taverna Greca
+
+Sviluppo del sito web per Yamas Taverna Greca a San Vitaliano.
+
+Website: https://yamastavernagreca.it
+
+### Minimaz CLI
+
+Minimaz è uno strumento CLI per la gestione e la compilazione di siti web statici.
+
+Repository: https://github.com/zeller-dev/minimaz-cli
+
+## Collaboratori
+
+### Fabio Lione | Desh Art
+
+Illustratore e graphic designer.
+
+LinkedIn: https://www.linkedin.com/in/fabio-lione/
+
+### Valentina Battafarano
+
+Full Stack Digital Marketer.
+
+LinkedIn: https://www.linkedin.com/in/valentinabattafarano
+
+## Store
+
+Zeller Industries dispone di uno store ufficiale:
+
+https://store.zellerindustries.com
+
+## Contatti
+
+Email: [info@zellerindustries.com](mailto:info@zellerindustries.com)
+
+WhatsApp: https://wa.me/393513878958
+
+## Social
+
+LinkedIn: https://www.linkedin.com/company/zellerindustries
+
+GitHub: https://github.com/zellerindustries
+
+Instagram: https://www.instagram.com/zellerindustries_
+
+Facebook: https://www.facebook.com/zellerindustries
+
+## Legal
+
+Privacy Policy: https://zellerindustries.com/privacy-policy
+
+Cookie Policy: https://zellerindustries.com/cookie-policy
+
+Location: Italia
+
+## Related Resources
+
+Sitemap: https://zellerindustries.com/sitemap.xml
+
+Canonical homepage: https://zellerindustries.com/

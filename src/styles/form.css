@@ -1,0 +1,260 @@
+form {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+fieldset {
+  border: var(--clr-element-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  background-color: var(--clr-bg-alt);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: border-color var(--t-fast);
+}
+
+fieldset:focus-within {
+  border-color: rgba(204, 102, 0, 0.4);
+}
+
+legend {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-primary);
+  padding: 0 var(--space-sm);
+  letter-spacing: 0.05em;
+  background-color: var(--clr-bg-main);
+  border-radius: var(--radius-sm);
+}
+
+label {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--clr-text-main);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  cursor: pointer;
+  transition: color var(--t-fast);
+}
+
+label:focus-within {
+  color: var(--clr-primary);
+}
+
+label:has(+ *:required)::after,
+*:required + label::after {
+  content: " *";
+  color: var(--clr-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+output {
+  font-family: var(--font-display);
+  color: var(--clr-primary);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--clr-surface);
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--radius-sm);
+  border: var(--clr-element-border);
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not(
+    [type="range"]
+  ):not([type="checkbox"]):not([type="radio"]):not([type="color"]),
+select,
+textarea {
+  width: 100%;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--clr-surface);
+  color: var(--clr-text-main);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  transition:
+    border-color var(--t-fast),
+    background-color var(--t-fast),
+    box-shadow var(--t-fast);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+select {
+  cursor: pointer;
+}
+
+:is(input, select, textarea):hover:not(:disabled) {
+  background-color: var(--clr-surface-hover);
+}
+
+:is(input, select, textarea):focus {
+  outline: none;
+  border-color: var(--clr-primary);
+  background-color: var(--clr-bg-main);
+}
+
+:is(input, select, textarea):focus-visible {
+  box-shadow: 0 0 0 3px rgba(204, 102, 0, 0.2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--clr-text-main);
+  -webkit-box-shadow: 0 0 0px 1000px var(--clr-surface) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+::placeholder {
+  color: var(--clr-text-muted);
+  opacity: 0.5;
+  font-style: italic;
+}
+
+input:required:invalid:not(:placeholder-shown),
+textarea:required:invalid:not(:placeholder-shown) {
+  border-color: #d32f2f;
+  border-left-width: 4px;
+}
+
+input:required:valid:not(:placeholder-shown),
+textarea:required:valid:not(:placeholder-shown) {
+  border-color: #388e3c;
+}
+
+:is(input, select, textarea):disabled,
+:is(input, select, textarea)[readonly] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: transparent;
+  border-style: dashed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--clr-primary);
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+  margin-right: var(--space-xs);
+  transition: transform var(--t-fast);
+}
+
+input[type="checkbox"]:active,
+input[type="radio"]:active {
+  transform: scale(0.9);
+}
+
+input[type="file"] {
+  padding: 0;
+  background: transparent;
+  border: none;
+  color: var(--clr-text-muted);
+}
+
+input[type="file"]::file-selector-button {
+  font-family: var(--font-display);
+  background-color: var(--clr-surface);
+  color: var(--clr-text-main);
+  border: var(--clr-element-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-xs) var(--space-md);
+  margin-right: var(--space-sm);
+  cursor: pointer;
+  transition:
+    background-color var(--t-fast),
+    border-color var(--t-fast);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: #fff;
+}
+
+input[type="range"] {
+  accent-color: var(--clr-primary);
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+}
+
+input[type="range"]:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 4px;
+}
+
+input[type="color"] {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 2px solid var(--clr-border);
+  border-radius: 50%;
+}
+
+button {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  transition: all var(--t-fast);
+}
+
+button[type="submit"] {
+  background-color: var(--clr-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(204, 102, 0, 0.2);
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: var(--clr-primary-hover);
+  box-shadow: 0 6px 15px rgba(204, 102, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+button[type="reset"] {
+  background-color: transparent;
+  color: var(--clr-text-muted);
+  border-color: var(--clr-border);
+}
+
+button[type="reset"]:hover:not(:disabled) {
+  background-color: var(--clr-surface);
+  color: var(--clr-text-main);
+  border-color: var(--clr-text-muted);
+}
