@@ -2,6 +2,14 @@
    REFERRAL PROGRAM - STILI DEDICATI (referral.css)
 ===================================================== */
 
+#referral-hero {
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(204, 102, 0, 0.1) 0%,
+    transparent 60%
+  );
+}
+
 /* Content wrapper, mirrors .footer-container's centering formula */
 .container {
   width: min(100%, var(--content-max-width));
@@ -35,7 +43,7 @@
 }
 
 .hero-subtitle {
-  color: var(--clr-accent);
+  color: var(--clr-text-muted);
   font-weight: 700;
   letter-spacing: 1px;
   margin-top: 0.5rem;
