@@ -178,7 +178,7 @@ h2 {
   font-family: var(--font-display);
   font-size: var(--fs-xl);
   letter-spacing: 0.08em;
-  color: var(--clr-primary);
+  color: var(--clr-text-main);
   text-align: center;
   margin-bottom: var(--space-md);
 }
