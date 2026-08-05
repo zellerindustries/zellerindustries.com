@@ -146,6 +146,29 @@
 }
 
 /* --------------------------------------------------------------------------
+   BACK TO TOP
+   -------------------------------------------------------------------------- */
+
+.back-to-top-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.back-to-top-wrapper a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
+
+.back-to-top-wrapper a:hover,
+.back-to-top-wrapper a:focus-visible {
+  color: var(--clr-primary);
+}
+
+/* --------------------------------------------------------------------------
    FOOTER BOTTOM
    -------------------------------------------------------------------------- */
 
