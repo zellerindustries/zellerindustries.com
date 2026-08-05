@@ -74,6 +74,20 @@
           entro 24 ore lavorative.
         </p>
 
+        <noscript>
+          <p class="input-error">
+            Il modulo richiede JavaScript per funzionare. Contattaci
+            direttamente via
+            <a href="mailto:info@zellerindustries.com">email</a> o
+            <a
+              href="https://wa.me/393513878958"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp</a
+            >.
+          </p>
+        </noscript>
+
         <form id="contact-form" novalidate>
           <!-- honeypot: hidden from real users and assistive tech, still present for bots to fill -->
           <div class="sr-only" aria-hidden="true">
@@ -111,17 +125,19 @@
             <label for="message">Messaggio</label>
             <textarea id="message" name="message" required></textarea>
 
-            <input type="checkbox" id="privacy" name="privacy" required />
-            <label for="privacy">
-              Ho letto e accetto la
-              <a href="/legal/privacy">Privacy Policy</a>
-            </label>
+            <div class="checkbox-row">
+              <input type="checkbox" id="privacy" name="privacy" required />
+              <label for="privacy">
+                Ho letto e accetto la
+                <a href="/legal/privacy">Privacy Policy</a>
+              </label>
+            </div>
           </fieldset>
 
           <button type="submit" id="submit-btn" disabled>Invia Messaggio</button>
         </form>
 
-        <div id="form-status" role="status" aria-live="polite"></div>
+        <div id="form-status" role="alert" aria-live="assertive"></div>
 
         <div id="form-success" hidden>
           <i class="icon shield-fill-check" aria-hidden="true"></i>

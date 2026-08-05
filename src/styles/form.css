@@ -48,7 +48,8 @@ label:focus-within {
 }
 
 label:has(+ *:required)::after,
-*:required + label::after {
+*:required + label::after,
+*:required + .input-error + label::after {
   content: " *";
   color: var(--clr-primary);
   font-weight: var(--font-weight-bold);
@@ -124,16 +125,16 @@ textarea:-webkit-autofill:focus {
   font-style: italic;
 }
 
-input:required:invalid:not(:placeholder-shown),
-textarea:required:invalid:not(:placeholder-shown),
-select:required:invalid {
+input:required:user-invalid,
+textarea:required:user-invalid,
+select:required:user-invalid {
   border-color: #d32f2f;
   border-left-width: 4px;
 }
 
-input:required:valid:not(:placeholder-shown),
-textarea:required:valid:not(:placeholder-shown),
-select:required:valid {
+input:required:user-valid,
+textarea:required:user-valid,
+select:required:user-valid {
   border-color: #388e3c;
 }
 
@@ -158,6 +159,17 @@ input[type="radio"] {
 input[type="checkbox"]:active,
 input[type="radio"]:active {
   transform: scale(0.9);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.checkbox-row .input-error {
+  flex-basis: 100%;
 }
 
 input[type="file"] {
@@ -286,15 +298,14 @@ button[type="submit"].loading {
 }
 
 #form-status {
-  display: none;
   padding: var(--space-sm);
   border-radius: var(--radius-sm);
   font-size: var(--fs-sm);
   text-align: center;
 }
 
-#form-status.active {
-  display: block;
+#form-status:empty {
+  padding: 0;
 }
 
 #form-status.error {
