@@ -118,7 +118,7 @@
 ------------------------------ */
 .btn.secondary {
   background-color: transparent;
-  border-color: var(--clr-border);
+  border-color: currentColor;
   color: var(--clr-text-main);
 }
 

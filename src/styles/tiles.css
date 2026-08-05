@@ -27,7 +27,7 @@
 /* Default Outline / Surface */
 .tile.base {
   border: var(--clr-element-border);
-  background-color: var(--clr-surface);
+  background-color: var(--clr-surface-hover);
   color: var(--clr-primary);
 }
 
