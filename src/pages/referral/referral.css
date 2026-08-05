@@ -50,6 +50,10 @@
 }
 
 /* Numerazione Step */
+.step-card > .icon {
+  margin-bottom: 0.5rem;
+}
+
 .step-badge {
   display: inline-flex;
   align-items: center;
