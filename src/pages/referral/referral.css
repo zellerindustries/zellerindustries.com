@@ -50,10 +50,6 @@
 }
 
 /* Numerazione Step */
-.step-card > .icon {
-  margin-bottom: 0.5rem;
-}
-
 .step-badge {
   display: inline-flex;
   align-items: center;
@@ -74,10 +70,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.tier-card > .icon {
-  margin-bottom: 0.5rem;
 }
 
 .tier-badge-label {
