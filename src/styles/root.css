@@ -161,8 +161,9 @@ body {
 }
 
 a {
-  color: var(--clr-accent);
-  text-decoration: none;
+  color: var(--clr-text-main);
+  text-decoration: underline;
+  text-underline-offset: 2px;
   transition: color var(--t-fast);
 }
 
