@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="it" data-lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="it-IT" />
+
+    <title>Contattaci – Zeller Industries | Sviluppo Software e Consulenza IT</title>
+    <meta
+      name="description"
+      content="Compila il modulo di contatto per richiedere informazioni su sviluppo software, consulenza IT e ricerca e sviluppo con Zeller Industries."
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Zeller Industries" />
+    <meta name="copyright" content="© 2026 Zeller Industries" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#cc6600" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contattaci – Zeller Industries" />
+    <meta
+      property="og:description"
+      content="Compila il modulo per richiedere informazioni su sviluppo software, consulenza IT e ricerca e sviluppo."
+    />
+    <meta property="og:url" content="https://zellerindustries.com/form" />
+    <meta property="og:site_name" content="Zeller Industries" />
+    <meta property="og:locale" content="it_IT" />
+    <meta
+      property="og:image"
+      content="https://zellerindustries.com/assets/og-cover.webp"
+    />
+
+    <link rel="canonical" href="https://zellerindustries.com/form" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header id="site-header">
+      <div id="header-container">
+        <a href="/" id="brand">
+          <img src="/assets/logo.webp" alt="" width="127" height="148" />
+        </a>
+
+        <input type="checkbox" id="nav-toggle" aria-label="Toggle navigation" />
+        <label for="nav-toggle" id="nav-toggle-label">
+          <i class="icon list" id="icon-open"></i>
+          <i class="icon x-lg" id="icon-close"></i>
+        </label>
+
+        <nav id="main-nav">
+          <ul class="reset">
+            <li><a href="/#hero">About</a></li>
+            <li><a href="/#services-section">Services</a></li>
+            <li><a href="/#portfolio-section">Portfolio</a></li>
+            <li><a href="/form" class="btn cta" aria-current="page">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact-form-section" aria-labelledby="form-title">
+        <h1 id="form-title">Contattaci</h1>
+        <p>
+          Compila il modulo per raccontarci del tuo progetto. Ti risponderemo
+          entro 24 ore lavorative.
+        </p>
+
+        <form id="contact-form" novalidate>
+          <!-- honeypot: hidden from real users and assistive tech, still present for bots to fill -->
+          <div class="sr-only" aria-hidden="true">
+            <label for="bot-field">Non compilare questo campo</label>
+            <input
+              type="text"
+              id="bot-field"
+              name="bot-field"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <fieldset>
+            <legend>I tuoi dati</legend>
+
+            <label for="name">Nome e Cognome</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+
+            <label for="subject">Oggetto</label>
+            <select id="subject" name="subject" required>
+              <option value="" selected disabled>Seleziona un'opzione</option>
+              <option value="Sviluppo Software">Sviluppo Software</option>
+              <option value="Consulenza IT">Consulenza IT</option>
+              <option value="Manutenzione e Assistenza">
+                Manutenzione e Assistenza
+              </option>
+              <option value="Ricerca e Sviluppo">Ricerca e Sviluppo</option>
+              <option value="Altro">Altro</option>
+            </select>
+
+            <label for="message">Messaggio</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="checkbox" id="privacy" name="privacy" required />
+            <label for="privacy">
+              Ho letto e accetto la
+              <a href="/legal/privacy">Privacy Policy</a>
+            </label>
+          </fieldset>
+
+          <button type="submit" id="submit-btn" disabled>Invia Messaggio</button>
+        </form>
+
+        <div id="form-status" role="status" aria-live="polite"></div>
+
+        <div id="form-success" hidden>
+          <i class="icon shield-fill-check" aria-hidden="true"></i>
+          <h2>Messaggio Inviato!</h2>
+          <p>
+            Grazie per averci contattato. Ti risponderemo entro 24 ore
+            lavorative.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="site-footer" role="contentinfo">
+      <div class="footer-top">
+        <div class="footer-container">
+          <div class="footer-col footer-brand">
+            <a href="/" class="footer-logo">
+              <span class="logo-zeller">ZELLER</span>
+              <span class="logo-industries">INDUSTRIES</span>
+            </a>
+            <p class="footer-desc">
+              Boutique di Software Engineering, sviluppo di web application ad
+              alte prestazioni e ricerca tecnologica.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h2 class="footer-title">Navigazione</h2>
+            <ul class="footer-links">
+              <li><a href="/#hero">Home</a></li>
+              <li><a href="/#services-section">Servizi</a></li>
+              <li><a href="/#portfolio-section">Portfolio</a></li>
+              <li><a href="/form">Contatti</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h2 class="footer-title">Connettiti</h2>
+            <div class="social-links">
+              <a
+                href="https://github.com/zellerindustries"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub di Zeller Industries"
+              >
+                <i class="icon github" aria-hidden="true"></i>
+                <span class="sr-only">GitHub</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/zellerindustries"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn di Zeller Industries"
+              >
+                <i class="icon linkedin" aria-hidden="true"></i>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+              <a
+                href="https://wa.me/393513878958"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contatto WhatsApp"
+              >
+                <i class="icon whatsapp" aria-hidden="true"></i>
+                <span class="sr-only">WhatsApp</span>
+              </a>
+              <a
+                href="mailto:info@zellerindustries.com"
+                aria-label="Invia un'email a Zeller Industries"
+              >
+                <i class="icon envelope-fill" aria-hidden="true"></i>
+                <span class="sr-only">Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="legal-info">
+            <p>&copy; 2026 Zeller Industries. Tutti i diritti riservati.</p>
+            <p class="company-details">
+              <span>P.IVA: IT03209750649</span> &bull;
+              <span>Italia</span>
+            </p>
+          </div>
+          <div class="legal-links">
+            <a href="/legal/privacy">Informativa sulla Riservatezza</a>
+            <a href="/legal/cookie">Informativa sui Cookie</a>
+            <a href="/legal/terms">Termini e Condizioni</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <nav id="bottom-bar" aria-label="Navigazione rapida mobile">
+      <div class="bottom-bar-container">
+        <a href="/" class="btn">
+          <i class="icon house-fill"></i>
+          <span>Home</span>
+        </a>
+
+        <a href="/form" class="btn" aria-current="page">
+          <i class="icon envelope-fill"></i>
+          <span>Contatti</span>
+        </a>
+
+        <a
+          href="https://wa.me/393513878958"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn"
+        >
+          <i class="icon whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </nav>
+
+    <script type="module">
+      import { initForm } from "/form.js";
+      initForm();
+    </script>
+  </body>
+</html>
