@@ -45,18 +45,18 @@
   color: var(--clr-primary);
 }
 
-/* Contact Us Button (Matching image_542de3.png) */
+/* Contact Us Button */
 #main-nav a.btn.cta {
-  background-color: #006eb3; /* Blue background from the image */
+  background-color: var(--clr-primary);
   color: #ffffff;
   padding: 0.5rem 1.5rem;
   border-radius: 50px; /* Pill shape */
-  border: 1px solid #005b94;
+  border: 1px solid var(--clr-primary-hover);
   transition: background-color var(--t-fast);
 }
 
 #main-nav a.btn.cta:hover {
-  background-color: #005b94;
+  background-color: var(--clr-primary-hover);
   color: #ffffff;
 }
 
