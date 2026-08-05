@@ -114,23 +114,19 @@
 }
 
 /* ------------------------------
-   SECONDARY BUTTON (BLUE)
+   SECONDARY BUTTON (NEUTRAL OUTLINE)
 ------------------------------ */
 .btn.secondary {
-  background-color: var(--clr-accent);
-  border-color: var(--clr-accent);
-  color: #ffffff;
-}
-
-.btn.secondary .icon {
-  color: #ffffff;
+  background-color: transparent;
+  border-color: var(--clr-border);
+  color: var(--clr-text-main);
 }
 
 .btn.secondary:not([aria-disabled="true"]):hover {
-  background-color: var(--clr-accent-hover);
-  border-color: var(--clr-accent-hover);
-  color: #ffffff;
-  box-shadow: 0 4px 16px rgba(0, 102, 153, 0.35);
+  background-color: transparent;
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  box-shadow: none;
 }
 
 /* ------------------------------
