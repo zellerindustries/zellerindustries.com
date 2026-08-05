@@ -106,3 +106,19 @@
 .icon.clock-fill::before {
   content: "\F291";
 }
+
+.icon.megaphone-fill::before {
+  content: "\F483";
+}
+
+.icon.patch-check-fill::before {
+  content: "\F4B5";
+}
+
+.icon.cash-coin::before {
+  content: "\F632";
+}
+
+.icon.award-fill::before {
+  content: "\F153";
+}
