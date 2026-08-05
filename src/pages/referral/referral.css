@@ -76,7 +76,12 @@
   justify-content: space-between;
 }
 
+.tier-card > .icon {
+  margin-bottom: 0.5rem;
+}
+
 .tier-badge-label {
+  font-family: var(--font-display);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -85,6 +90,7 @@
 }
 
 .tier-percentage {
+  font-family: var(--font-display);
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1;
@@ -114,17 +120,20 @@
 
 /* Accenti Colore dei Tier (presi dalla locandina) */
 .tier-bronze .tier-percentage,
-.tier-bronze h3 {
+.tier-bronze h3,
+.tier-bronze .icon {
   color: #c28851; /* Bronzo */
 }
 
 .tier-silver .tier-percentage,
-.tier-silver h3 {
+.tier-silver h3,
+.tier-silver .icon {
   color: #d1d3d4; /* Argento */
 }
 
 .tier-gold .tier-percentage,
-.tier-gold h3 {
+.tier-gold h3,
+.tier-gold .icon {
   color: #f2c700; /* Oro */
 }
 
@@ -138,4 +147,9 @@
 .legal-notice a {
   color: inherit;
   text-decoration: underline;
+}
+
+/* Section rhythm */
+#tiers {
+  background-color: var(--clr-bg-alt);
 }
