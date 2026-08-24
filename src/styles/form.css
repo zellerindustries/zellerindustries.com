@@ -148,12 +148,54 @@ select:required:user-valid {
 
 input[type="checkbox"],
 input[type="radio"] {
-  accent-color: var(--clr-primary);
+  appearance: none;
+  -webkit-appearance: none;
   width: 1.25rem;
   height: 1.25rem;
-  cursor: pointer;
   margin-right: var(--space-xs);
-  transition: transform var(--t-fast);
+  display: inline-grid;
+  place-content: center;
+  background-color: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition:
+    transform var(--t-fast),
+    background-color var(--t-fast),
+    border-color var(--t-fast);
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  width: 0.3rem;
+  height: 0.6rem;
+  border: solid var(--clr-surface);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+input[type="radio"]:checked::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--clr-surface);
+}
+
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
 }
 
 input[type="checkbox"]:active,
@@ -166,6 +208,10 @@ input[type="radio"]:active {
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-xs);
+}
+
+.checkbox-row input[type="checkbox"] {
+  margin-right: 0;
 }
 
 .checkbox-row .input-error {
@@ -259,6 +305,11 @@ button[type="submit"]:hover:not(:disabled) {
 
 button[type="submit"]:active:not(:disabled) {
   transform: translateY(0);
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 button[type="reset"] {

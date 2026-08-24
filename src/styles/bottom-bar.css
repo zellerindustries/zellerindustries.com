@@ -144,3 +144,9 @@
     display: none;
   }
 }
+
+@media (max-width: 767.98px) {
+  body {
+    padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
+  }
+}

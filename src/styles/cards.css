@@ -20,6 +20,12 @@
     background-color var(--t-fast);
 }
 
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--clr-primary);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
 .card .card-info,
 .card .card-content {
   width: 100%;
@@ -45,6 +51,7 @@
 
 .card img {
   width: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
   border-radius: var(--radius-sm);

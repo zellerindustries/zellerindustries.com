@@ -29,14 +29,17 @@
   --clr-accent: #006699;
   --clr-accent-hover: #0088cc;
 
+  /* Navy, not the brand book's flat #222222 dark — deliberate deviation, keeps
+     the industrial/tech depth of the hero instead of generic dark-mode gray.
+     --clr-bg-alt already matches the brand's extended blue tint scale. */
   --clr-bg-main: #041e2f;
   --clr-bg-alt: #07304a;
 
-  --clr-surface: #1f1f1f;
+  --clr-surface: #222222;
   --clr-surface-hover: #2a2a2a;
 
-  --clr-text-main: #e7e7e7;
-  --clr-text-muted: #a0a0a0;
+  --clr-text-main: #eeeeee;
+  --clr-text-muted: #b0b0b0;
 
   --clr-border: rgba(255, 255, 255, 0.12);
   --clr-element-border: 1px solid var(--clr-border);
@@ -50,7 +53,7 @@
 
   /* FONT SIZE — Fluid Golden Ratio */
   --fs-base: clamp(0.95rem, 0.9rem + 0.4vw, 1.1rem);
-  --fs-sm: calc(var(--fs-base) - var(--ratio));
+  --fs-sm: calc(var(--fs-base) / var(--ratio));
   --fs-md: var(--fs-base);
   --fs-lg: calc(var(--fs-base) * var(--ratio));
   --fs-xl: calc(var(--fs-base) * var(--ratio) * var(--ratio));
@@ -236,6 +239,7 @@ main > * {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: start;
   gap: var(--space-md);
   margin-top: var(--space-lg);
 }

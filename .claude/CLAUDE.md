@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The marketing/landing site for Zeller Industries (zellerindustries.com), an Italian software engineering / IT consulting company. Static HTML/CSS site (Italian content, `lang="it"`), no client-side framework, no build-time JS bundling in use today (no files under a `scripts` dir yet).
+The marketing/landing site for Zeller Industries (zellerindustries.com), an Italian software engineering / IT consulting company. Static HTML/CSS site (Italian content, `lang="it"`), no client-side framework. One page (the contact form) has a TypeScript handler under `src/scripts/`, bundled by minimaz-cli into `dist/scripts.js`; everything else is plain HTML/CSS.
 
 ## Commands
 
@@ -29,10 +29,10 @@ To build a single page for a quick check, just run `npm run build` — minimaz b
 
 ```
 root.css → bootstrap-icons.css → header.css → prefers.css → hero.css → footer.css
-→ bottom-bar.css → contacts.css → buttons.css → tiles.css → cards.css
+→ bottom-bar.css → buttons.css → tiles.css → cards.css → form.css
 ```
 
-Every top-level page (`index.html`, `linkinbio.html`, `contacts.html`) links only `/style.css`. Sub-section pages under `legal/` and `referral/` link `/style.css` **plus** their own local stylesheet (`legal.css`, `referral.css`) that lives next to them — those are not in the `@import` chain, they're linked directly in each page's `<head>`.
+Every top-level page (`index.html`, `linkinbio.html`, `contact.html`, `form.html`) links only `/style.css`. Sub-section pages under `legal/` and `referral/` link `/style.css` **plus** their own local stylesheet (`legal.css`, `referral.css`) that lives next to them — those are not in the `@import` chain, they're linked directly in each page's `<head>`.
 
 When adding a new component stylesheet, it only takes effect site-wide if you add an `@import` for it in `src/style.css`; page-local CSS (like `legal.css`/`referral.css`) is the pattern for styling scoped to one section instead.
 
@@ -40,10 +40,13 @@ When adding a new component stylesheet, it only takes effect site-wide if you ad
 
 **Pages present**:
 - `src/pages/index.html` — main landing page (hero, services, portfolio, collaborators, socials, contact — all single-page sections)
-- `src/pages/linkinbio.html`, `src/pages/contacts.html`
+- `src/pages/linkinbio.html`
+- `src/pages/contact.html` — `/contact`, static contact info (email/WhatsApp/socials), no form
+- `src/pages/form.html` — `/form`, the actual contact form; behavior lives in `src/scripts/form.ts`
 - `src/pages/legal/{privacy,terms,cookie}.html` + `legal.css`
 - `src/pages/referral/{index,terms}.html` + `referral.css`
-- `src/pages/form.html` — currently empty, in progress; `src/styles/form.css` exists but is not yet linked/imported anywhere
+
+**Contact form** (`src/pages/form.html` + `src/scripts/form.ts`): client-side only, no server in this repo. Validates fields, applies a honeypot field and a minimum-fill-time check for bot filtering, and rate-limits repeat submissions via a `localStorage` timestamp lock (24h). On submit it POSTs JSON directly to an external AWS Lambda function URL (hardcoded in `form.ts`) — there's no local API route to look for. `contact.html`'s "Contact Us" nav CTA and the form page are separate destinations; don't assume one links to the other beyond what's currently in the markup.
 
 **Assets**: `src/public/` maps straight to the output root (favicons, `robots.txt`, `sitemap.xml`, `llms.txt`, images under `assets/`, fonts). `src/public/llms.txt` is a structured plain-text summary of the company (services, portfolio, contacts) intended for LLM crawlers — keep it in sync with `index.html` content if either changes.
 
