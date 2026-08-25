@@ -53,8 +53,12 @@
 
 #title-industries {
   display: block;
-  color: #cc6600;
-  background: linear-gradient(135deg, #cc6600 0%, #ff8533 100%);
+  color: var(--clr-primary);
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary) 0%,
+    var(--clr-primary-light) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -60,7 +60,7 @@
 .btn:not([aria-disabled="true"]):hover {
   background-color: var(--clr-surface-hover);
   border-color: rgba(255, 255, 255, 0.2);
-  color: #ffffff;
+  color: var(--clr-text-inverse);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -99,17 +99,17 @@
 .btn.primary {
   background-color: var(--clr-primary);
   border-color: var(--clr-primary);
-  color: #ffffff;
+  color: var(--clr-text-inverse);
 }
 
 .btn.primary .icon {
-  color: #ffffff;
+  color: var(--clr-text-inverse);
 }
 
 .btn.primary:not([aria-disabled="true"]):hover {
   background-color: var(--clr-primary-hover);
   border-color: var(--clr-primary-hover);
-  color: #ffffff;
+  color: var(--clr-text-inverse);
   box-shadow: 0 4px 16px rgba(204, 102, 0, 0.35);
 }
 

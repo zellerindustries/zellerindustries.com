@@ -138,7 +138,7 @@
 
 .social-links a:hover,
 .social-links a:focus-visible {
-  color: #ffffff;
+  color: var(--clr-text-inverse);
   background-color: var(--clr-primary);
   border-color: var(--clr-primary);
   transform: translateY(-2px);

@@ -57,7 +57,7 @@
   width: 2.5rem;
   height: 2.5rem;
   background-color: var(--clr-primary);
-  color: #ffffff;
+  color: var(--clr-text-inverse);
   font-weight: bold;
   border-radius: 6px;
   margin-bottom: 1rem;

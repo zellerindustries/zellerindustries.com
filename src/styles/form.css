@@ -1,6 +1,6 @@
 form {
-  max-width: var(--content-max-width);
-  margin: 0 auto;
+  max-width: 640px;
+  margin: var(--space-lg) auto 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
@@ -10,7 +10,8 @@ fieldset {
   border: var(--clr-element-border);
   border-radius: var(--radius-md);
   padding: var(--space-md);
-  background-color: var(--clr-bg-alt);
+  background-color: var(--clr-surface);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
@@ -23,11 +24,12 @@ fieldset:focus-within {
 
 legend {
   font-family: var(--font-display);
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
   font-weight: var(--font-weight-bold);
-  color: var(--clr-text-main);
+  color: var(--clr-primary);
   padding: 0 var(--space-sm);
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   background-color: var(--clr-bg-main);
   border-radius: var(--radius-sm);
 }
@@ -72,7 +74,7 @@ select,
 textarea {
   width: 100%;
   padding: var(--space-xs) var(--space-sm);
-  background-color: var(--clr-surface);
+  background-color: var(--clr-bg-main);
   color: var(--clr-text-main);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-sm);
@@ -95,13 +97,12 @@ select {
 }
 
 :is(input, select, textarea):hover:not(:disabled) {
-  background-color: var(--clr-surface-hover);
+  background-color: color-mix(in srgb, var(--clr-bg-main) 85%, white);
 }
 
 :is(input, select, textarea):focus {
   outline: none;
   border-color: var(--clr-primary);
-  background-color: var(--clr-bg-main);
 }
 
 :is(input, select, textarea):focus-visible {
@@ -115,7 +116,7 @@ textarea:-webkit-autofill,
 textarea:-webkit-autofill:hover,
 textarea:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--clr-text-main);
-  -webkit-box-shadow: 0 0 0px 1000px var(--clr-surface) inset;
+  -webkit-box-shadow: 0 0 0px 1000px var(--clr-bg-main) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -128,14 +129,14 @@ textarea:-webkit-autofill:focus {
 input:required:user-invalid,
 textarea:required:user-invalid,
 select:required:user-invalid {
-  border-color: #d32f2f;
+  border-color: var(--clr-error);
   border-left-width: 4px;
 }
 
 input:required:user-valid,
 textarea:required:user-valid,
 select:required:user-valid {
-  border-color: #388e3c;
+  border-color: var(--clr-success);
 }
 
 :is(input, select, textarea):disabled,
@@ -155,8 +156,8 @@ input[type="radio"] {
   margin-right: var(--space-xs);
   display: inline-grid;
   place-content: center;
-  background-color: var(--clr-surface);
-  border: 1px solid var(--clr-border);
+  background-color: var(--clr-bg-main);
+  border: 1px solid var(--clr-text-muted);
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition:
@@ -242,7 +243,7 @@ input[type="file"]::file-selector-button {
 input[type="file"]::file-selector-button:hover {
   background-color: var(--clr-primary);
   border-color: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-text-inverse);
 }
 
 input[type="range"] {
@@ -293,7 +294,7 @@ button {
 
 button[type="submit"] {
   background-color: var(--clr-primary);
-  color: #ffffff;
+  color: var(--clr-text-inverse);
   box-shadow: 0 4px 10px rgba(204, 102, 0, 0.2);
 }
 
@@ -308,7 +309,9 @@ button[type="submit"]:active:not(:disabled) {
 }
 
 button[type="submit"]:disabled {
-  opacity: 0.6;
+  background-color: var(--clr-surface);
+  color: var(--clr-text-muted);
+  box-shadow: none;
   cursor: not-allowed;
 }
 
@@ -335,12 +338,12 @@ button[type="reset"]:hover:not(:disabled) {
 }
 
 .char-counter.warning {
-  color: #d32f2f;
+  color: var(--clr-error);
 }
 
 .input-error {
   font-size: var(--fs-sm);
-  color: #d32f2f;
+  color: var(--clr-error);
 }
 
 button[type="submit"].loading {
@@ -360,13 +363,13 @@ button[type="submit"].loading {
 }
 
 #form-status.error {
-  background-color: rgba(211, 47, 47, 0.1);
-  color: #d32f2f;
+  background-color: color-mix(in srgb, var(--clr-error) 10%, transparent);
+  color: var(--clr-error);
 }
 
 #form-status.success {
-  background-color: rgba(56, 142, 60, 0.1);
-  color: #388e3c;
+  background-color: color-mix(in srgb, var(--clr-success) 10%, transparent);
+  color: var(--clr-success);
 }
 
 #form-success {

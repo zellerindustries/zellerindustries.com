@@ -26,6 +26,7 @@
   /* COLORS */
   --clr-primary: #cc6600;
   --clr-primary-hover: #e67300;
+  --clr-primary-light: #ff8533;
   --clr-accent: #006699;
   --clr-accent-hover: #0088cc;
 
@@ -40,6 +41,13 @@
 
   --clr-text-main: #eeeeee;
   --clr-text-muted: #b0b0b0;
+  /* Text drawn on top of --clr-primary/--clr-accent fills — stays white in every
+     color-scheme branch since those fills stay bright enough for it either way. */
+  --clr-text-inverse: #ffffff;
+
+  /* STATUS */
+  --clr-error: #d32f2f;
+  --clr-success: #388e3c;
 
   --clr-border: rgba(255, 255, 255, 0.12);
   --clr-element-border: 1px solid var(--clr-border);
@@ -96,7 +104,7 @@
 
 ::selection {
   background-color: var(--clr-primary);
-  color: #ffffff;
+  color: var(--clr-text-inverse);
 }
 
 /* ------------------------------

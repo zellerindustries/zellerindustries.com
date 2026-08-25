@@ -1,24 +1,6 @@
-/**
- * Configuration & Constants
- */
-const CONFIG = {
-  LOCK_KEY: "zeller_industries_form_lock",
-  SUCCESS_KEY: "zeller_industries_form_submitted",
-  LOCK_DURATION_MS: 24 * 60 * 60 * 1000, // 24 hours (1 day) cooldown
-  MIN_FILL_TIME_SECONDS: 3,
-  MAX_MESSAGE_LENGTH: 5000,
-  DEBOUNCE_MS: 200,
-};
-
-interface ContactFormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  privacy: boolean;
-  "bot-field": string;
-  submission_speed: number;
-}
+import { CONFIG, type ContactFormData } from "./form-types.js";
+import { validators } from "./form-validators.js";
+import { debounce, sanitize } from "./form-utils.js";
 
 /* ==========================================
    FORM INITIALIZATION
@@ -111,31 +93,6 @@ export function initForm(): void {
   }
 
   /**
-   * Validators
-   */
-  const validators = {
-    name: (v: string) =>
-      v.length < 2
-        ? "Il nome deve contenere almeno 2 caratteri."
-        : !/^[\p{L}\s.'-]+$/u.test(v)
-          ? "Il nome contiene caratteri non validi."
-          : "",
-    email: (v: string) =>
-      !v
-        ? "L'email è richiesta."
-        : !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)
-          ? "Indirizzo email non valido."
-          : "",
-    subject: (v: string) => (!v ? "Seleziona un'opzione valida." : ""),
-    message: (v: string) =>
-      v.length < 10
-        ? "Il messaggio è troppo corto (min. 10 caratteri)."
-        : v.length > CONFIG.MAX_MESSAGE_LENGTH
-          ? "Il messaggio supera la lunghezza massima consentita."
-          : "",
-  };
-
-  /**
    * UI Helpers
    */
   const setFieldError = (
@@ -210,20 +167,6 @@ export function initForm(): void {
   };
 
   /**
-   * Debounce
-   */
-  const debounce = <T extends (...args: any[]) => void>(
-    fn: T,
-    delay: number,
-  ) => {
-    let t: number;
-    return (...args: Parameters<T>) => {
-      clearTimeout(t);
-      t = window.setTimeout(() => fn(...args), delay);
-    };
-  };
-
-  /**
    * UI State
    */
   const showSuccessUI = () => {
@@ -267,15 +210,6 @@ export function initForm(): void {
       "warning",
       len > CONFIG.MAX_MESSAGE_LENGTH * 0.9,
     );
-  };
-
-  /**
-   * Sanitization
-   */
-  const sanitize = (s: string) => {
-    const t = document.createElement("div");
-    t.textContent = s;
-    return t.innerHTML;
   };
 
   /**

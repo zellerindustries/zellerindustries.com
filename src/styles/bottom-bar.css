@@ -26,7 +26,7 @@
 
   padding: var(--space-sm);
 
-  background: rgba(31, 31, 31, 0.88);
+  background: color-mix(in srgb, var(--clr-surface) 88%, transparent);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 
